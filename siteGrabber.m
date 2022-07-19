@@ -3,7 +3,7 @@ close all; % Close all figures (except those of imtool.)
 clear; % Erase all existing variables. Or clearvars if you want.
 workspace; % Make sure the workspace panel is showing.
 %%
-Prompt='Please enter then number of Unique sites: ';
+Prompt='Please enter the number of Unique sites: ';
 Number_Unique_sites = input(Prompt); % Num of unique sites without repeatition
 numPointsClicked = 0;
 allDataPoints = zeros (Number_Unique_sites, 3); %the matrix with all datapoints and site numbers
@@ -14,7 +14,7 @@ xaxe = xlim;
 yaxe = ylim;
 hold on;
 %% Give the user the information
-promptMessage = sprintf('Left click up to %d points.\nRight click to remove point.', Number_Unique_sites);
+promptMessage = sprintf('Left click up to %d points.\nMiddle click to remove point.', Number_Unique_sites);
 titleBarCaption = 'Continue?';
 button = questdlg(promptMessage, titleBarCaption, 'Continue', 'Cancel', 'Continue');
 if strcmpi(button, 'Cancel')
